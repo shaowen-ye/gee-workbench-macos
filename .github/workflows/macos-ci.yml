@@ -1,0 +1,35 @@
+name: macOS CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Python package
+        run: python -m pip install -e '.[dev]'
+      - name: Install audit tools
+        env:
+          HOMEBREW_NO_AUTO_UPDATE: '1'
+        run: brew install shellcheck gitleaks
+      - name: Python tests
+        run: pytest -q
+      - name: Shell syntax
+        run: bash -n scripts/*.sh tests/*.sh launcher/macos/*.sh
+      - name: ShellCheck
+        run: shellcheck scripts/*.sh tests/*.sh launcher/macos/*.sh
+      - name: Privacy scan
+        run: bash scripts/privacy_scan.sh
+      - name: Gitleaks
+        run: gitleaks detect --source . --no-banner --redact
+      - name: Temporary-home installation
+        run: bash tests/smoke.sh

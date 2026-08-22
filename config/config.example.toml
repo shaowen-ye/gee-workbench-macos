@@ -1,0 +1,5 @@
+# Copy to ~/.config/gee-workbench/config.toml
+project = "your-google-cloud-project"
+
+# Optional. Defaults to projects/<project>/assets.
+asset_root = "projects/your-google-cloud-project/assets"
