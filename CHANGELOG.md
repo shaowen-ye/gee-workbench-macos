@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.2] - 2026-08-22
+
+### Changed
+
+- adjusted the README logo display width from 96 to 112 pixels for a better
+  visual balance on GitHub;
+- updated the macOS application and Python package version to 0.1.2.
+
 ## [0.1.1] - 2026-08-22
 
 ### Changed

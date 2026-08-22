@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="launcher/macos/assets/gee-workbench-icon.png" alt="GEE Workbench icon" width="96">
+  <img src="launcher/macos/assets/gee-workbench-icon.png" alt="GEE Workbench icon" width="112">
 </p>
 
 # GEE Workbench for macOS

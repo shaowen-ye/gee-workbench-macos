@@ -53,7 +53,7 @@ plutil -remove CFBundleIconName "$APP_PATH/Contents/Info.plist" 2>/dev/null || t
 plutil -replace CFBundleDisplayName -string 'GEE Workbench' "$APP_PATH/Contents/Info.plist"
 plutil -replace CFBundleName -string 'GEE Workbench' "$APP_PATH/Contents/Info.plist"
 plutil -replace CFBundleIdentifier -string 'org.local.gee.workbench' "$APP_PATH/Contents/Info.plist"
-plutil -replace CFBundleShortVersionString -string '0.1.1' "$APP_PATH/Contents/Info.plist"
+plutil -replace CFBundleShortVersionString -string '0.1.2' "$APP_PATH/Contents/Info.plist"
 plutil -replace CFBundleVersion -string '1' "$APP_PATH/Contents/Info.plist"
 codesign --force --deep --sign - "$APP_PATH" >/dev/null
 touch "$APP_PATH"

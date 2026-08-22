@@ -23,6 +23,6 @@ def test_complete_readmes_link_to_each_other_and_use_small_logo() -> None:
 
     assert 'href="README.zh-CN.md"' in english
     assert 'href="README.md"' in chinese
-    assert 'width="96"' in english
-    assert 'width="96"' in chinese
+    assert 'width="112"' in english
+    assert 'width="112"' in chinese
     assert english.count("\n## ") == chinese.count("\n## ") == 16
