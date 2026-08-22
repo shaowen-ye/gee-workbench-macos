@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.1] - 2026-08-22
+
+### Changed
+
+- reduced the displayed README logo to a restrained 96-pixel width;
+- separated the documentation into complete English and Simplified Chinese
+  editions with language-switch links;
+- expanded installation, authentication, CLI, QGIS, privacy, and data-governance
+  guidance in both languages;
+- updated the public GitHub About description in English and Chinese;
+- updated the macOS application and Python package version to 0.1.1.
+
 ## [0.1.0] - 2026-08-22
 
 ### Added
